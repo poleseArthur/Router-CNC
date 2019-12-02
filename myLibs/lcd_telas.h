@@ -13,6 +13,7 @@ extern int x;
 extern int y;
 extern int z;
 extern int s;
+extern int overTravel;
 
 void init_screen();
 void error_screen();
