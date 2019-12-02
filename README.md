@@ -2,7 +2,14 @@
 
 + ## Descrição geral do sistema:
 
-  + O sistema 
+  + Um Router CNC é basicamente uma fresadora controlada eletronicamente por um
+    sistema microprocessado e acionada por servomotores. A estrutura mecânica básica
+    consiste em 3 eixos ortogonais, X, Y e Z, e um eixo rotativo, normalmente denominado eixo
+    árvore ou spindle.<br>
+    Está estrutra é comum a outros tipos de equipamentos industriais, apenas
+    substituindo o eixo rotativo pela aplicação específica desejada. Por exemplo, um cabeçote
+    extrusor, Figura 2, para uma impressora 3D ou um cabeçote Laser para uma cortadora a
+    laser.
 
     + #### Diagrama de blocos do sistema:
 
@@ -18,8 +25,9 @@
      
 + ## Interface
 
-  + O bloco de interface contém um display LCD 16x2 e 4 botões além da Interface Serial. 
-  
+  + O bloco de interface contém um display LCD 16x2 e 4 botões além da Interface Serial. A interface
+    deverá apresentar a posição atual dos eixos e velocidade do spindle bem como possibilitar a
+    modificação do estado da máquina, referência, manual ou automático.
   
    + O display apresenta 5 telas, sendo elas a tela inicial, de erro, de referenciamento, de posição e de fim de curso               positivo, as quais serão explicadas na seção **Funcionamento**. 
 
@@ -45,10 +53,22 @@
       | Eixos   | F=             | Modifica a velocidade de movimento dos eixos X, Y e Z.<br><br>Lento, Medio, Rapido                                                                                                                                                   | F=Medio<br>Ajusta a velocidade<br>de deslocamento<br>para a velocidade<br>média, mas não<br>movimenta nenhum<br>eixo. |
       |         | X=<br>Y=<br>Z= | Comanda o movimento para o eixo<br>especificado.<br>Caso mais de um eixo seja comandado na<br>mesma mensagem, os eixos deve ser<br>interpolados linearmente, válido somente<br>para os eixo X e Y.<br>*Respeitar os limites de curso | X=100<br>Move o eixo X para<br>a posição 100<br>X=10Y=5<br>Move ambos os<br>eixos com<br>interpolação linear.         |
 
+    + As mensagens recebidas devem estar entre os caracteres delimitadores de início ($) e final (#) de mensagem. Exemplos de         mensagem válida:<br><br>
+        + Ex1.: Ajustar a velocidade do spindle para 1000 RPM, ativar o giro no sentido CW,
+        ajustar a velocidade de movimento dos eixo em rápido e mover o eixo Z para a
+        posição 10.
+           <mark><p align="center">
+           $S=1000M3Z=10F=Rapido# 
+           </mark></p>
+        + Ex2.: Mover eixo X para a posição 10 e o eixo Y para a posição 5. Neste caso os
+        eixo movem com a última velocidade ajustada (Lento, Medio, Rapido ).
+          <p align="center">
+          $X=10Y=5# 
+          </p>
 
-+ ## Funcionamento
+    + ## Funcionamento
 
-  + 
+      + 
 
     <p align="center">
      <img width="540" height="320" src="">
