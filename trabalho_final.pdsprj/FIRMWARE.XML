@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<FIRMWARE FAMILY="ARDUINO" COMPILER="Arduino AVR (Proteus)" TYPE="Arduino Mega">
+ <PROJECTS>
+  <STRING>ARDUINO MEGA</STRING>
+ </PROJECTS>
+</FIRMWARE>
