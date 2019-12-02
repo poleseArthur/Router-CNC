@@ -29,22 +29,21 @@
       + -: Movimenta eixo no sentido negativo, anti-horário (CCW)
       + S: Liga spindle em manual.
       
-    + Se o modo manual não estiver ativado, o controlador aceita comandos pela entrada
-      serial, os comandos permitidos são listados abaixo:
       
-| Eixo    | Comando        | Descrição                                                                                                                                                                                                                            | Exemplo                                                                                                               |
-|---------|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| Spindle | S=             | Ajusta a velocidade (em RPM) de giro do eixo Spindle.<br>Limites:<br>Mínimo: 200 RPM<br>Máximo: 2000 RPM                                                                                                                             | S=1000<br>Ajusta a velocidade<br>em 1000RPM, mas<br>não liga o eixo.                                                  |
-|         | M3             | Liga o eixo spindle no sentido CW                                                                                                                                                                                                    |                                                                                                                       |
-|         | M4             | Liga eixo spindle no sentido CCW                                                                                                                                                                                                     |                                                                                                                       |
-| Eixos   | F=             | Modifica a velocidade de movimento dos eixos X, Y e Z.<br><br>Lento, Medio, Rapido                                                                                                                                                   | F=Medio<br>Ajusta a velocidade<br>de deslocamento<br>para a velocidade<br>média, mas não<br>movimenta nenhum<br>eixo. |
-|         | X=<br>Y=<br>Z= | Comanda o movimento para o eixo<br>especificado.<br>Caso mais de um eixo seja comandado na<br>mesma mensagem, os eixos deve ser<br>interpolados linearmente, válido somente<br>para os eixo X e Y.<br>*Respeitar os limites de curso | X=100<br>Move o eixo X para<br>a posição 100<br>X=10Y=5<br>Move ambos os<br>eixos com<br>interpolação linear.         |
-
-
-
       <p align="center">
         <img width="440" height="220" src="">
       </p>
+      
+    + Se o modo manual não estiver ativado, o controlador aceita comandos pela entrada
+      serial, os comandos permitidos são listados abaixo:
+      
+      | Eixo    | Comando        | Descrição                                                                                                                                                                                                                            | Exemplo                                                                                                               |
+      |---------|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+      | Spindle | S=             | Ajusta a velocidade (em RPM) de giro do eixo Spindle.<br>Limites:<br>Mínimo: 200 RPM<br>Máximo: 2000 RPM                                                                                                                             | S=1000<br>Ajusta a velocidade<br>em 1000RPM, mas<br>não liga o eixo.                                                  |
+      |         | M3             | Liga o eixo spindle no sentido CW                                                                                                                                                                                                    |                                                                                                                       |
+      |         | M4             | Liga eixo spindle no sentido CCW                                                                                                                                                                                                     |                                                                                                                       |
+      | Eixos   | F=             | Modifica a velocidade de movimento dos eixos X, Y e Z.<br><br>Lento, Medio, Rapido                                                                                                                                                   | F=Medio<br>Ajusta a velocidade<br>de deslocamento<br>para a velocidade<br>média, mas não<br>movimenta nenhum<br>eixo. |
+      |         | X=<br>Y=<br>Z= | Comanda o movimento para o eixo<br>especificado.<br>Caso mais de um eixo seja comandado na<br>mesma mensagem, os eixos deve ser<br>interpolados linearmente, válido somente<br>para os eixo X e Y.<br>*Respeitar os limites de curso | X=100<br>Move o eixo X para<br>a posição 100<br>X=10Y=5<br>Move ambos os<br>eixos com<br>interpolação linear.         |
 
 
 + ## Funcionamento
