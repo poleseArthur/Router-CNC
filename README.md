@@ -85,21 +85,6 @@
   + **Spindle** O motor do Spindle é simulado com um Motor DC unipolar e um encoder de 20PPR. A velocidade atual, não a programada, é mostrada no display da interface.
   + **Heart Beat:** Um LED foi utilizado para informar que o sistema está em execução. O LED permanece aceso caso o driver de saída esteja desabilitado.
 
-+ ## Controlador
-  + O controlador utilizado foi do tipo Proporcional, neste controlador o sinal de erro,
-diferença entre o sinal de referência e o sinal de realimentação, é multiplicado pelo ganho
-proporcional (Kp) e aplicado a saída.
-
-    <p align="center">
-      <img width="440" height="220" src="diagrams/proportional_controller.PNG">
-    </p>
-
-   + #### Diagrama de blocos do controlador:
-   
-<p align="center">
-<img width="540" height="320" src="diagrams/controller_block_diagram.PNG">
-</p>
-
 
 + ## Software
   
