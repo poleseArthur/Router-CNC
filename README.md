@@ -53,18 +53,19 @@
       | Eixos   | F=             | Modifica a velocidade de movimento dos eixos X, Y e Z.<br><br>Lento, Medio, Rapido                                                                                                                                                   | F=Medio<br>Ajusta a velocidade<br>de deslocamento<br>para a velocidade<br>média, mas não<br>movimenta nenhum<br>eixo. |
       |         | X=<br>Y=<br>Z= | Comanda o movimento para o eixo<br>especificado.<br>Caso mais de um eixo seja comandado na<br>mesma mensagem, os eixos deve ser<br>interpolados linearmente, válido somente<br>para os eixo X e Y.<br>*Respeitar os limites de curso | X=100<br>Move o eixo X para<br>a posição 100<br>X=10Y=5<br>Move ambos os<br>eixos com<br>interpolação linear.         |
 
-    + As mensagens recebidas devem estar entre os caracteres delimitadores de início ($) e final (#) de mensagem. Exemplos de         mensagem válida:<br><br>
-        + Ex1.: Ajustar a velocidade do spindle para 1000 RPM, ativar o giro no sentido CW,
-        ajustar a velocidade de movimento dos eixo em rápido e mover o eixo Z para a
-        posição 10.
-           <mark><p align="center">
-           $S=1000M3Z=10F=Rapido# 
-           </mark></p>
-        + Ex2.: Mover eixo X para a posição 10 e o eixo Y para a posição 5. Neste caso os
-        eixo movem com a última velocidade ajustada (Lento, Medio, Rapido ).
-          <p align="center">
-          $X=10Y=5# 
-          </p>
+    + As mensagens recebidas devem estar entre os caracteres delimitadores de início ($) e final (#) de mensagem.<br>
+      + Exemplos de mensagem válida:<br>
+          + Ex1.: Ajustar a velocidade do spindle para 1000 RPM, ativar o giro no sentido CW,
+          ajustar a velocidade de movimento dos eixo em rápido e mover o eixo Z para a
+          posição 10.
+             <p align="center">
+             <mark>$S=1000M3Z=10F=Rapido#</mark>
+             </p>
+          + Ex2.: Mover eixo X para a posição 10 e o eixo Y para a posição 5. Neste caso os
+          eixo movem com a última velocidade ajustada (Lento, Medio, Rapido ).
+            <p align="center">
+            <mark>$X=10Y=5#</mark> 
+            </p>
 
     + ## Funcionamento
 
