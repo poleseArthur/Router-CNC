@@ -79,7 +79,7 @@
 + ## Periféricos
 
   + **Chaves e Sensores:** São utilizadas chaves normalmente abertas para simular o comportamento dos sensores de referência (Home) e de proteção aberta (Cover Closed).
-  + **MCU:** ...
+  + **MCU:** O microcontrolador é o ATMEGA328P (Arduino Mega 2560).
   + **Driver:** O driver utilizado é o circuito integrado L293D - Quadruple Half-H Drivers.
   + **Motor dos eixos** São utilizados motores de passo bipolares.
   + **Spindle** O motor do Spindle é simulado com um Motor DC unipolar e um encoder de 20PPR. A velocidade atual, não a programada, é mostrada no display da interface.
