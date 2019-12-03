@@ -39,7 +39,7 @@
       
       
       <p align="center">
-        <img width="440" height="220" src="photos/keyboard.PNG">
+        <img width="280" height="95" src="photos/keyboard.PNG">
       </p>
       
     + Se o modo manual não estiver ativado, o controlador aceita comandos pela entrada
