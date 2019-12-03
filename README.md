@@ -14,13 +14,13 @@
     + #### Diagrama de blocos do sistema:
 
       <p align="center">
-        <img width="540" height="320" src="">
+        <img width="540" height="320" src="diagrams/system_block_diagram.PNG">
       </p>
 
     + #### Diagrama esquemático do sistema:
     
     <p align="center">
-     <img width="540" height="320" src="">
+     <img width="540" height="320" src="diagrams/schematic_diagram.PNG">
      </p>
      
 + ## Interface
@@ -39,7 +39,7 @@
       
       
       <p align="center">
-        <img width="440" height="220" src="">
+        <img width="280" height="95" src="photos/keyboard.PNG">
       </p>
       
     + Se o modo manual não estiver ativado, o controlador aceita comandos pela entrada
